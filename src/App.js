@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import Homemount from './component/Homemount'
+import Home from './component/Home'
+import "./App.css"
+import Home2 from './component/Home2'
+import Updating from './component/Updating'
+import Home3 from './component/Home3'
+import Unmounting from './component/Unmounting'
 
-function App() {
+
+ function App() {
+  let [comp, setComp] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className='heading'>
+       <h1>React lifecycle</h1>  
+      <div className='image'></div>
+      <Home/>
+      <Homemount/>
+      <Home2/>
+      <Updating/>
+      <Home3/>
+      {comp && <Unmounting/>}
+      <button onClick={()=>{setComp(false)}}>Remove Component</button>
+ 
 
-export default App;
+    </div>
+  )
+}
+export default App

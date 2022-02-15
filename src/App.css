@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.heading{
+  text-align: center;
+}
+.image{
+   margin-left: 20rem;
+   height: 20rem;
+   width: 40rem;
+   background-image: url("D:\web development\react\extrareact\protolife\src\img\reactcpm.png");
+   background-repeat: no-repeat;
+   background-size: 40rem 20rem;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
